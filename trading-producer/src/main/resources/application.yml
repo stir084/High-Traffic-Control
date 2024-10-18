@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: trading:producer
+server:
+  port: 9090
+
+resilience4j:
+  ratelimiter:
+    instances:
+      default:
+        limit-for-period: 5
+        limit-refresh-period: 60s
+        timeout-duration: 0s
+
+
