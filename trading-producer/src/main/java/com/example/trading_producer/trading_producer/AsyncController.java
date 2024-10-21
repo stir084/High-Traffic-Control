@@ -14,6 +14,9 @@ public class AsyncController {
     this.asyncService = asyncService;
   }
 
+  /**
+   * Spring MVC로 Webflux와 같이 비동기처럼 구현하기
+   */
   @GetMapping("/api/call-external")
   public ResponseEntity<String> callExternalApi() {
     asyncService.callExternalApi();

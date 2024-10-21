@@ -11,5 +11,14 @@ resilience4j:
         limit-for-period: 5
         limit-refresh-period: 60s
         timeout-duration: 0s
-
+  circuitbreaker:
+    instances:
+      default:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 5    # 5번의 호출로 실패율을 계산
+        failure-rate-threshold: 30 # 실패율이 30% 이상일 때 서킷이 열림
+        wait-duration-in-open-state: 20s  # 서킷이 열린 후 20초 동안 대기
+        permitted-number-of-calls-in-half-open-state: 2 # 반쯤 열린 상태에서 2번의 호출만 허용
+        minimum-number-of-calls: 3  # 최소 3번의 호출 후 실패율 계산 시작
+        automatic-transition-from-open-to-half-open-enabled: true
 
