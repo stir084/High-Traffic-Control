@@ -13,6 +13,7 @@ public class RateLimiterController {
   private final RateLimiterService rateLimiterService;
   /**
    * Resilience4J으로 TPS 관리
+   * 1. Rate Limiter로 요청 횟수 제한하기
    * 어노테이션을 사용하려면 아래 둘중 하나를 사용한다.
    * runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.22.1'
    * implementation 'org.springframework.boot:spring-boot-starter-aop:'
