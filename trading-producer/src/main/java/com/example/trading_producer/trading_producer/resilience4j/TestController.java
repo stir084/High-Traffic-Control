@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
+  /**
+   * 서킷 브레이커로 일정 횟수 실패시 요청 차단하기
+   */
   @GetMapping("/test-circuitbreaker")
   @CircuitBreaker(name = "default", fallbackMethod = "fallback")
   public String withCircuitBreaker() {

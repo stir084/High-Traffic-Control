@@ -32,7 +32,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'io.github.resilience4j:resilience4j-spring-boot3:2.2.0'
 	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
   	implementation 'org.springframework.boot:spring-boot-starter-aop:'
+	implementation group: 'nl.martijndwars', name: 'web-push', version: '5.1.1'
+	implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.70'// VAPID에 대한 암호화 라이브러리
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

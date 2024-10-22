@@ -16,6 +16,8 @@ public class AsyncController {
 
   /**
    * Spring MVC로 Webflux와 같이 비동기처럼 구현하기
+   * 1. 비동기로 API 요청한다.
+   * 2. Push Notification으로 사용자에게 알림을 보낸다.
    */
   @GetMapping("/api/call-external")
   public ResponseEntity<String> callExternalApi() {

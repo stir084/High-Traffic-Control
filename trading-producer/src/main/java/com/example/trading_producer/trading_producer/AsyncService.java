@@ -15,7 +15,6 @@ public class AsyncService {
     this.webClient = webClientBuilder.baseUrl("http://localhost:9091").build(); // 외부 API URL
   }
 
-  @Async
   public CompletableFuture<String> callExternalApi() {
     return webClient.get()
       .uri("/api/sleep")
